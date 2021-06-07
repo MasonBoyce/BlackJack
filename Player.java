@@ -17,6 +17,19 @@ public class Player{
   public void setBetAmount(int bet){
     betAmount = bet;
   }
+  public boolean betAllowed(int bet){
+    if (bet>money){
+      System.out.println("Can not bet more than money you have.");
+      return false;
+    }
+    else if (betAmount<0){
+      System.out.println("Can not bet negative amount");
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
   public int getBetAmount(){
     return betAmount;
   }
@@ -37,14 +50,15 @@ public class Player{
   }
   public void winBet(){
     money += betAmount;
-    System.out.println("You now have $"+money);
+      System.out.println("You won. Your current balance is: $" + money);
   }
   public  void loseBet(){
     money -= betAmount;
-    System.out.println("You now have $"+money);
+      System.out.println("You lost. Your current balance is: $" + money);
   }
   public void winBlackJack(){
     money+= betAmount*1.5;
+    System.out.println("You got BlackJack. Your current balance is: $" + money);
   }
   public void  printBet(){
     System.out.println("Bet Amount " +betAmount);

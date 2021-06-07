@@ -49,7 +49,7 @@ public class Hand{
   }
   public void printHand(){
     for (int i=0; i<hand.size();i++){
-      System.out.println("Hand:" + hand.get(i));
+      System.out.println(hand.get(i));
     }
   }
   public boolean orginalHand(){
