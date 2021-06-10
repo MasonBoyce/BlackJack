@@ -1,5 +1,4 @@
-  import java.util.ArrayList;
-  import java.util.Scanner;
+import java.util.Scanner;
 
   public class Game{
     Deck deck;
@@ -18,6 +17,7 @@
       System.out.println("Please enter the amount of  money that you would like to deposit");
       int money  =scnr.nextInt();
       Player player = new Player(money,name);
+      scnr.close();
       return player;
     }
 
@@ -49,6 +49,7 @@
         break;
       }
     }
+    scnr.close();
     }
 
     public int playerTakesTurn(Player player, int betAmount){
@@ -122,6 +123,7 @@
           player.winBet();
           break;
         }
+        scnr.close();
       }
       if  (playerHand.checkBust()){
         return 0;
@@ -133,7 +135,6 @@
 
 
     public int dealerTakesTurn(Player dealer){
-        int total = 0;
         Hand dealerHand = dealer.getHand();
         dealerHand.toggleFirstCard();
         System.out.println("Dealer's Hand");
@@ -151,7 +152,6 @@
 
           }
           else{
-            total =  dealerHand.cardTotal();
             break;
           }
         }
@@ -230,6 +230,7 @@
       System.out.println("Press q to quit or anything else to play another hand");
       input = scnr.next();
       }
+      scnr.close();
     }
     }
   }

@@ -24,9 +24,7 @@ public class Hand{
   }
   public int amountOfCards(){
     int numCards = 0;
-    for(Card card: hand){
-      numCards +=1;
-    }
+    numCards = hand.size();
     return  numCards;
   }
   public int cardTotal(){
