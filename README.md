@@ -4,8 +4,11 @@ Recreation of BlackJack in the Terminal!!!
 
 How to run the program:
 
+
 Open the File in your IDE
+
 The program should be precompiled but if not run this in your terminal: $  Javac Game.java
+
 Then Run the Program: $ Java Game.java
 
 DESCRIPTION:
